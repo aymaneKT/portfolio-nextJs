@@ -153,7 +153,8 @@
     @apply text-3xl md:text-4xl lg:text-5xl font-sans leading-snug;
   }
   section {
-    @apply px-6 py-3   lg:px-17  xl:px-40;
+    @apply px-6 py-3   lg:px-17  xl:px-40  mb-50;
+    /* qui il mb.50 era solo per telefoni ma lho messa per tutti  max-sm: 50 */
   }
 }
 
@@ -165,7 +166,7 @@
     @apply bg-background text-foreground;
   }
 }
-/* 
+/*
 nav {
   cursor: url("/cursor.png") 16 16, auto;
 } */

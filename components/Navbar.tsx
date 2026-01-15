@@ -1,12 +1,10 @@
 import { AnchorLinks, consonantLinks, LinksType } from "@/lib/consonants";
 export default function Navbar() {
   return (
-    <nav className=" px-8 py-6 h-dvh fixed z-10 right-0 bg-[#303030]">
+    <nav className=" px-8 py-6 h-dvh fixed z-10 right-0 bg-[#303030] grid grid-cols-2 place-items-center">
       {consonantLinks.map((link: AnchorLinks, index: number) => (
         <div key={crypto.randomUUID()} className="mt-4">
-          <h2 className={`${index === 1 ? "mt-14" : "mt-0"}`}>
-            {link.section}
-          </h2>
+          <h2>{link.section}</h2>
           <ul className="flex flex-col">
             {link.links.map((item: LinksType) => (
               <li

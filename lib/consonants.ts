@@ -48,3 +48,107 @@ export const heroinfo: HeroInfoType[] = [
     description: "Hours Worked",
   },
 ];
+
+export type moduleType = {
+  name: string;
+  image: string;
+};
+export type stackType = {
+  categorie: string;
+  module: moduleType[];
+};
+
+export const stacks: stackType[] = [
+  {
+    categorie: "Frontend",
+    module: [
+      {
+        name: "JavaScript",
+        image: "/images/tech/js.png",
+      },
+      {
+        name: "TypeScript",
+        image: "/images/tech/ts.png",
+      },
+      {
+        name: "React",
+        image: "/images/tech/react.png",
+      },
+      {
+        name: "Next.Js",
+        image: "/images/tech/next.png",
+      },
+      {
+        name: "Tailwind CSS",
+        image: "/images/tech/tailwind.png",
+      },
+      {
+        name: "Html",
+        image: "/images/tech/html.png",
+      },
+      {
+        name: "CSS",
+        image: "/images/tech/css.svg",
+      },
+      {
+        name: "GSAP",
+        image: "/images/tech/gsap.png",
+      },
+      {
+        name: "bootstrap",
+        image: "/images/tech/bootstrap.svg",
+      },
+      {
+        name: "Material UI",
+        image: "/images/tech/materialui.png",
+      },
+    ],
+  },
+  {
+    categorie: "Backend",
+    module: [
+      {
+        name: "Node.Js",
+        image: "/images/tech/node.png",
+      },
+      {
+        name: "Expess.Js",
+        image: "/images/tech/express.png",
+      },
+      {
+        name: "MySQL",
+        image: "/images/tech/mysql.svg",
+      },
+      {
+        name: "PostgreSQL",
+        image: "/images/tech/postgreSQL.png",
+      },
+      {
+        name: "mongoDb",
+        image: "/images/tech/mongodb.png",
+      },
+    ],
+  },
+
+  {
+    categorie: "Tools",
+    module: [
+      {
+        name: "Git",
+        image: "/images/tech/git.png",
+      },
+      {
+        name: "Github",
+        image: "/images/tech/github.png",
+      },
+      {
+        name: "Postman",
+        image: "/images/tech/postman.png",
+      },
+      {
+        name: "Npm",
+        image: "/images/tech/npm.png",
+      },
+    ],
+  },
+];
