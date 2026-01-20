@@ -20,7 +20,7 @@ export const consonantLinks: AnchorLinks[] = [
       { name: "Home", url: "#home", color: "#14B8A6" },
       { name: "About Me", url: "#about", color: "#EAB308" },
       { name: "Projects", url: "#projects", color: "#3B82F6" },
-      { name: "Experience", url: "#experience", color: "#5051AF" },
+      { name: "Contact", url: "#contact", color: "#5051AF" },
     ],
   },
   {
@@ -83,7 +83,7 @@ export const stacks: stackType[] = [
         image: "/images/tech/tailwind.png",
       },
       {
-        name: "Html",
+        name: "HTML",
         image: "/images/tech/html.png",
       },
       {
@@ -152,3 +152,40 @@ export const stacks: stackType[] = [
     ],
   },
 ];
+
+export type projectType = {
+  projectName: string;
+  image: string;
+  usedTech: string[];
+};
+
+export const projects: projectType[] = [
+  {
+    projectName: "Uber Web App",
+    // projectName: "Uber Web App for the Bologna Fair (Italy) – Totem Version",
+    image: "/images/projects/uber.jpg",
+    usedTech: ["React", "Tailwind CSS", "React Dom Router", "Framer Motion"],
+  },
+  {
+    projectName: "Dev Events",
+    image: "/images/projects/DevEvents.png",
+    usedTech: ["Next.Js", "Tailwind CSS", "TypeScript", "POSTHOG", "MongoDB"],
+  },
+  {
+    projectName: "Car Rental",
+    image: "/images/projects/CarRental.png",
+    usedTech: ["React", "Tailwind CSS", "Mongo Db", "Express.Js", "Node.Js"],
+  },
+  {
+    projectName: "Volution Wear",
+    image: "/images/projects/VolutionWear.jpg",
+    usedTech: ["React", "Tailwind CSS", "MySQL", "Express.Js", "Node.Js"],
+  },
+  {
+    projectName: "Velvet Pour",
+    image: "/images/projects/VelvetPour.png",
+    usedTech: ["React", "Tailwind CSS", "GSAP"],
+  },
+];
+
+export const email: string = "aymanekabtitech@gmail.com";

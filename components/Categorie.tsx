@@ -12,7 +12,9 @@ export default function Categorie({
         alt="GIF"
         loading="lazy"
         width={35}
+        unoptimized
         height={50}
+
       />
       <h3 className="uppercase text-xl text-secondary font-semibold ">{categorieName}</h3>
     </div>

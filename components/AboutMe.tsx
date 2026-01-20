@@ -1,6 +1,9 @@
 export default function AboutMe() {
   return (
-    <section className="text-secondary x  h-dvh flex flex-col justify-center ">
+    <section
+      id="about"
+      className="text-secondary x  h-dvh flex flex-col justify-center "
+    >
       <p className="text-4xl font-light text-white mb-18 md:text-6xl ">
         I believe in a user-centered design approach, building interfaces that
         are clean, responsive, and designed around how people actually use them.

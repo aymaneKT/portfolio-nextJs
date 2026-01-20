@@ -1,4 +1,9 @@
-import { AnchorLinks, consonantLinks, LinksType } from "@/lib/consonants";
+import {
+  AnchorLinks,
+  consonantLinks,
+  email,
+  LinksType,
+} from "@/lib/consonants";
 export default function Navbar() {
   return (
     <nav className=" px-8 py-6 h-dvh fixed z-10 right-0 bg-[#303030] grid grid-cols-2 place-items-center">
@@ -19,7 +24,12 @@ export default function Navbar() {
                 ) : (
                   ""
                 )}
-                <a href={item.url}>{item.name} </a>
+                <a
+                  target={`${index === 1 ? "_blank" : "_self"}`}
+                  href={item.url}
+                >
+                  {item.name}{" "}
+                </a>
               </li>
             ))}
           </ul>
@@ -27,8 +37,8 @@ export default function Navbar() {
       ))}
       <div className="absolute bottom-12">
         <h2>get in touch</h2>
-        <a href="mailto:aymanekabtitech@gmail.com" target="_blank">
-          aymanekabtitech@gmail.com
+        <a href={`mailto:${email}`} target="_blank">
+          {email}
         </a>
       </div>
     </nav>

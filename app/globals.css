@@ -170,3 +170,7 @@
 nav {
   cursor: url("/cursor.png") 16 16, auto;
 } */
+
+* {
+  scroll-behavior: smooth;
+}
