@@ -5,12 +5,13 @@ import gsap from "gsap";
 import { useState } from "react";
 
 export function Hamburger() {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
   useGSAP(() => {
     gsap.to("nav", {
-      xPercent: isOpen ? 0 : 100,
-      borderRadius: isOpen ? 0 : 100,
-      duration: 0.7,
+      right: isOpen ? 0 : "-100%",
+      borderRadius: isOpen ? 0 : 120,
+      ease: "power3.inOut",
+      duration: 1,
     });
   }, [isOpen]);
   return (
