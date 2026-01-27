@@ -13,6 +13,7 @@ export default function Projects() {
     usedTech: [],
   });
   const [mousePosition, setMousePosition] = useState<number>(0);
+
   return (
     <section
       id="projects"
@@ -26,18 +27,17 @@ export default function Projects() {
       <Categorie categorieName="Selected Projects" />
       <div className="group">
         {projects.map((project: projectType, index: number) => (
-          <Link key={crypto.randomUUID()} href={""}>
+          <Link key={project.projectName + index} href={""}>
             <PeojectItem {...project} setProject={setProject} index={index} />
           </Link>
         ))}
         <Image
-          src={project?.image}
-          alt={project?.projectName}
+          src={project.image}
+          alt={project.projectName}
           width={700}
           height={700}
           style={{ top: `${mousePosition - 120}px` }}
           className={`max-sm:hidden w-[30vw] sm:right-10   h-auto absolute opacity-0 group-hover:opacity-100   `}
-          quality={100}
         />
       </div>
     </section>

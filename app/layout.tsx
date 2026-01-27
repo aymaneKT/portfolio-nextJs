@@ -1,16 +1,11 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
+import { Roboto_Flex } from "next/font/google";
 import Galaxy from "@/components/Galaxy";
-import localFont from "next/font/local";
+import { SmoothCursor } from "@/components/ui/smooth-cursor";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger, SplitText);
-
-const robotoFlex = localFont({
-  src: "./fonts/RobotoFlex.ttf",
+const robotoFlex = Roboto_Flex({
+  subsets: ["latin"],
   variable: "--font-roboto-flex",
   display: "swap",
 });
@@ -29,8 +24,9 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${robotoFlex.className}  antialiased dark overflow-x-hidden`}
+        className={`${robotoFlex.variable}  antialiased dark overflow-x-hidden cursor-none`}
       >
+        <SmoothCursor />{" "}
         <div
           style={{
             width: "100%",

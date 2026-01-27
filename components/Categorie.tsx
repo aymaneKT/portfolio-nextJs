@@ -6,7 +6,7 @@ export default function Categorie({
   categorieName: string;
 }) {
   return (
-    <div className="flex items-center gap-4  mb-7">
+    <div className="flex items-center gap-4  mb-7 gsap-text">
       <Image
         src="/images/techGif.gif"
         alt="GIF"
@@ -14,9 +14,10 @@ export default function Categorie({
         width={35}
         unoptimized
         height={50}
-
       />
-      <h3 className="uppercase text-xl text-secondary font-semibold ">{categorieName}</h3>
+      <h3 className="uppercase text-xl text-secondary font-semibold ">
+        {categorieName}
+      </h3>
     </div>
   );
 }

@@ -14,13 +14,15 @@ export default function PeojectItem({
   return (
     <div
       className={`py-11 group ${index !== 0 ? "sm:border-t-2" : ""} relative`}
-      onMouseEnter={() =>
-        setProject({
-          projectName,
-          image,
-          usedTech,
-        })
-      }
+      onMouseEnter={() => {
+        if (window.innerWidth >= 640) {
+          setProject({
+            projectName,
+            image,
+            usedTech,
+          });
+        }
+      }}
     >
       <Image
         src={image}
@@ -28,10 +30,9 @@ export default function PeojectItem({
         width={700}
         height={700}
         sizes="(max-width: 640px) 90vw,
-         (max-width: 1024px) 60vw,
-         700px"
+       (max-width: 1024px) 60vw,
+       700px"
         className="w-[90vw] sm:w-[60vw] lg:w-175 h-auto sm:hidden"
-        quality={100}
       />
 
       <div className="flex  items-start gap-3">
@@ -42,8 +43,8 @@ export default function PeojectItem({
           </h3>
 
           <div className="text-secondary flex flex-wrap text-xs gap-2">
-            {usedTech.map((tech: string) => (
-              <span key={crypto.randomUUID()}>{tech}</span>
+            {usedTech.map((tech: string, index: Number) => (
+              <span key={tech + index}>{tech}</span>
             ))}
           </div>
         </div>

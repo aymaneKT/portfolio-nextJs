@@ -17,9 +17,9 @@ export default function Hero() {
         <button>Hire me</button>
       </div>
       <div className="flex px-6 justify-between max-sm:bottom-[10%] left-0 w-full absolute lg:px-9 md:px-3 md:items-end md:flex-col  md:gap-8 items-start  bottom-[7%] gap-2 lg:gap-2">
-        {heroinfo.map((info: HeroInfoType) => (
+        {heroinfo.map((info: HeroInfoType, index: Number) => (
           <div
-            key={crypto.randomUUID()}
+            key={info.description + index}
             className="flex-1 flex flex-col items-center justify-center  text-center md:md:items-end"
           >
             <h5 className="text-primary font-semibold">{info.numberInfo}</h5>
