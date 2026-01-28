@@ -5,7 +5,7 @@ import Galaxy from "@/components/Galaxy";
 import ReactLenis from "lenis/react";
 import { JetBrains_Mono } from "next/font/google";
 import IntroAnimation from "@/components/IntroAnimation";
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -46,6 +46,7 @@ export default function RootLayout({
         </div>
 
         <main>
+          <SpeedInsights />
           <IntroAnimation />
           <BlobCursor
             blobType="circle"
