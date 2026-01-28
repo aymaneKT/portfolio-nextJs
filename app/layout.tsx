@@ -6,6 +6,7 @@ import ReactLenis from "lenis/react";
 import { JetBrains_Mono } from "next/font/google";
 import IntroAnimation from "@/components/IntroAnimation";
 
+
 export const metadata: Metadata = {
   title: "Portfolio",
   description:
