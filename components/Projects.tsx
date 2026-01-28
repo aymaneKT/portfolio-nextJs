@@ -27,9 +27,12 @@ export default function Projects() {
       <Categorie categorieName="Selected Projects" />
       <div className="group">
         {projects.map((project: projectType, index: number) => (
-          <Link key={project.projectName + index} href={""}>
-            <PeojectItem {...project} setProject={setProject} index={index} />
-          </Link>
+          <PeojectItem
+            key={project.projectName + index}
+            {...project}
+            setProject={setProject}
+            index={index}
+          />
         ))}
         <Image
           src={project.image}

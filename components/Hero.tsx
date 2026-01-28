@@ -1,4 +1,5 @@
-import { heroinfo, HeroInfoType } from "@/lib/consonants";
+import { heroinfo, HeroInfoType, linkedin } from "@/lib/consonants";
+import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -14,7 +15,9 @@ export default function Hero() {
           building high-performance, scalable, and responsive <br /> web
           solutions.
         </p>
-        <button>Hire me</button>
+        <Link href={linkedin} target="_blank">
+          <button>Hire me</button>
+        </Link>
       </div>
       <div className="flex px-6 justify-between max-sm:bottom-[10%] left-0 w-full absolute lg:px-9 md:px-3 md:items-end md:flex-col  md:gap-8 items-start  bottom-[7%] gap-2 lg:gap-2">
         {heroinfo.map((info: HeroInfoType, index: Number) => (

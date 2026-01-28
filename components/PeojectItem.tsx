@@ -1,5 +1,6 @@
 "use client";
 import { projectType } from "@/lib/consonants";
+import { useGSAP } from "@gsap/react";
 import Image from "next/image";
 export default function PeojectItem({
   projectName,
@@ -11,6 +12,10 @@ export default function PeojectItem({
   index: number;
   setProject: (value: projectType) => void;
 }) {
+
+
+
+
   return (
     <div
       className={`py-11 group ${index !== 0 ? "sm:border-t-2" : ""} relative`}

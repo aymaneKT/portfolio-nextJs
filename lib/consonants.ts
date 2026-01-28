@@ -44,7 +44,7 @@ export const heroinfo: HeroInfoType[] = [
     description: "Completed Projects",
   },
   {
-    numberInfo: `2K+`,
+    numberInfo: `2k+`,
     description: "Hours Worked",
   },
 ];
@@ -163,7 +163,7 @@ export const projects: projectType[] = [
   {
     projectName: "Uber Web App",
     // projectName: "Uber Web App for the Bologna Fair (Italy) – Totem Version",
-    image: "/images/projects/uber.jpg",
+    image: "/images/projects/uberTotem.jpg",
     usedTech: ["React", "Tailwind CSS", "React Dom Router", "Framer Motion"],
   },
   {
@@ -189,3 +189,4 @@ export const projects: projectType[] = [
 ];
 
 export const email: string = "aymanekabtitech@gmail.com";
+export const linkedin: string = "https://www.linkedin.com/in/aymane-kabti/";

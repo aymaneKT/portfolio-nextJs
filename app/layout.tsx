@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import { Roboto_Flex } from "next/font/google";
+import BlobCursor from "@/components/BlobCursor";
 import Galaxy from "@/components/Galaxy";
-import { SmoothCursor } from "@/components/ui/smooth-cursor";
-
-const robotoFlex = Roboto_Flex({
-  subsets: ["latin"],
-  variable: "--font-roboto-flex",
-  display: "swap",
-});
+import ReactLenis from "lenis/react";
+import { JetBrains_Mono } from "next/font/google";
+import IntroAnimation from "@/components/IntroAnimation";
 
 export const metadata: Metadata = {
   title: "Portfolio",
@@ -16,38 +12,62 @@ export const metadata: Metadata = {
     "My personal portfolio website showcasing my projects and skills.",
 };
 
+export const mono = JetBrains_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${robotoFlex.variable}  antialiased dark overflow-x-hidden cursor-none`}
+        className={`${mono.className} antialiased dark overflow-x-hidden`}
+        suppressHydrationWarning
       >
-        <SmoothCursor />{" "}
-        <div
-          style={{
-            width: "100%",
-            height: "100dvh",
-            position: "fixed",
-            zIndex: "-1",
-          }}
-        >
+        <div className="w-full h-dvh fixed -z-1">
           <Galaxy
-            density={1}
-            glowIntensity={0.1}
-            saturation={0.4}
-            hueShift={250}
-            rotationSpeed={0.05}
-            starSpeed={0.3}
-            speed={0.4}
             mouseRepulsion={false}
-            transparent={true}
+            mouseInteraction
+            density={3}
+            glowIntensity={0.1}
+            saturation={0}
+            hueShift={0}
+            twinkleIntensity={0.8}
+            rotationSpeed={0.1}
+            repulsionStrength={2}
+            autoCenterRepulsion={0}
+            starSpeed={0.3}
+            speed={0.3}
           />
         </div>
-        <main>{children}</main>
+
+        <main>
+          <IntroAnimation />
+          <BlobCursor
+            blobType="circle"
+            fillColor="#90a955"
+            trailCount={3}
+            sizes={[10, 12, 75]}
+            innerSizes={[20, 35, 25]}
+            innerColor="rgba(255,255,255,0.8)"
+            opacities={[0.6, 0.6, 0.6]}
+            shadowColor="rgba(0,0,0,0.75)"
+            shadowBlur={5}
+            shadowOffsetX={10}
+            shadowOffsetY={10}
+            filterStdDeviation={30}
+            useFilter={true}
+            fastDuration={1}
+            slowDuration={0.5}
+            zIndex={11}
+          />
+          <ReactLenis root />
+
+          {children}
+        </main>
       </body>
     </html>
   );

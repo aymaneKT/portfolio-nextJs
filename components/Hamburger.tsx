@@ -18,7 +18,7 @@ export function Hamburger() {
     <span
       onClick={() => setIsOpen(!isOpen)}
       aria-label="Toggle menu"
-      className=" h-6 w-8 cursor-pointer fixed z-11 right-8 top-9"
+      className=" h-6 w-8  fixed z-11 right-8 top-9"
     >
       <span
         className={`

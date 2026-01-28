@@ -46,12 +46,8 @@
 }
 
 @theme {
-  --color-primary: #7fb3d8;
+  --color-primary: #90a955;
   --color-secondary: #acacac;
-}
-
-button {
-  cursor: url("/images/cursor.png"), pointer;
 }
 
 :root {
@@ -177,4 +173,5 @@ nav {
 
 * {
   scroll-behavior: smooth;
+  cursor: none;
 }
