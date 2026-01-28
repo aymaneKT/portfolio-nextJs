@@ -6,9 +6,10 @@ import ReactLenis from "lenis/react";
 import { JetBrains_Mono } from "next/font/google";
 import IntroAnimation from "@/components/IntroAnimation";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 export const metadata: Metadata = {
-  title: "Portfolio",
+  title: "Portfolio - Aymane Kabti",
   description:
     "My personal portfolio website showcasing my projects and skills.",
 };
@@ -71,6 +72,7 @@ export default function RootLayout({
           {children}
         </main>
       </body>
+      <GoogleAnalytics gaId="G-EGD9N2ZSMV" />
     </html>
   );
 }
