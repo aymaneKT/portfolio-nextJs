@@ -73,7 +73,7 @@ export default function AboutMe() {
   return (
     <section
       id="about"
-      className="text-secondary x  h-dvh flex flex-col justify-center "
+      className="text-secondary x  h-screen flex flex-col justify-center "
     >
       <p className="text-4xl font-light text-white mb-18 md:text-6xl gsap-text">
         I believe in a user-centered design approach, building interfaces that

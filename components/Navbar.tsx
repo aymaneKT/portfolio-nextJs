@@ -9,7 +9,7 @@ export default function Navbar() {
   return (
     <>
       <Hamburger />
-      <nav className=" px-8 py-6 h-dvh fixed z-10 -right-full bg-[#303030] grid grid-cols-2 place-items-center">
+      <nav className=" px-8 py-6 h-screen fixed z-10 -right-full bg-[#303030] grid grid-cols-2 place-items-center">
         {consonantLinks.map((link: AnchorLinks, index: number) => (
           <div key={link.section + index} className="mt-4">
             <h2>{link.section}</h2>

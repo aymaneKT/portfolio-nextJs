@@ -12,10 +12,6 @@ export default function PeojectItem({
   index: number;
   setProject: (value: projectType) => void;
 }) {
-
-
-
-
   return (
     <div
       className={`py-11 group ${index !== 0 ? "sm:border-t-2" : ""} relative`}
@@ -34,6 +30,7 @@ export default function PeojectItem({
         alt={projectName}
         width={700}
         height={700}
+        loading="lazy"
         sizes="(max-width: 640px) 90vw,
        (max-width: 1024px) 60vw,
        700px"

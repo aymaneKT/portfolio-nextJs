@@ -98,10 +98,6 @@ export const stacks: stackType[] = [
         name: "bootstrap",
         image: "/images/tech/bootstrap.svg",
       },
-      {
-        name: "Material UI",
-        image: "/images/tech/materialui.png",
-      },
     ],
   },
   {

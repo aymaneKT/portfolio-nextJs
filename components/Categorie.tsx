@@ -10,10 +10,11 @@ export default function Categorie({
       <Image
         src="/images/techGif.gif"
         alt="GIF"
-        loading="lazy"
         width={35}
         unoptimized
         height={50}
+        quality={75}
+        loading="lazy"
       />
       <h3 className="uppercase text-xl text-secondary font-semibold ">
         {categorieName}

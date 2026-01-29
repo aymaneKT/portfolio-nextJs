@@ -2,18 +2,18 @@
 
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export function Hamburger() {
   const [isOpen, setIsOpen] = useState<boolean>(false);
   useGSAP(() => {
     gsap.to("nav", {
       right: isOpen ? 0 : "-100%",
-      borderRadius: isOpen ? 0 : 120,
-      ease: "power3.inOut",
-      duration: 1,
+      borderRadius: isOpen ? 0 : 200,
+      duration: 1
     });
   }, [isOpen]);
+
   return (
     <span
       onClick={() => setIsOpen(!isOpen)}

@@ -40,6 +40,7 @@ export default function Mystack() {
                   alt={`${module.name} Logo`}
                   width={40}
                   height={40}
+                  loading="lazy"
                 />
                 <span className="capitalize text-2xl">{module.name}</span>
               </div>

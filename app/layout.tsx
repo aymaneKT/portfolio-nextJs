@@ -26,10 +26,10 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${mono.className} antialiased dark overflow-x-hidden`}
+        className={`${mono.className} antialiased dark overflow-hidden`}
         suppressHydrationWarning
       >
-        <div className="w-full h-dvh fixed -z-1">
+        <div className="w-full h-screen fixed -z-1">
           <Galaxy
             mouseRepulsion={false}
             mouseInteraction
