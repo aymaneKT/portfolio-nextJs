@@ -38,7 +38,7 @@ export default function Navbar() {
             </ul>
           </div>
         ))}
-        <div className="absolute bottom-12">
+        <div className="absolute bottom-15">
           <h2>get in touch</h2>
           <a href={`mailto:${email}`} target="_blank">
             {email}

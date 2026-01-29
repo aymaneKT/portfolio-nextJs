@@ -26,7 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${mono.className} antialiased dark overflow-hidden`}
+        className={`${mono.className} antialiased dark overflow-x-hidden`}
         suppressHydrationWarning
       >
         <div className="w-full h-screen fixed -z-1">
